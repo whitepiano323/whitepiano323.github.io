@@ -3,11 +3,9 @@ export interface ProjectType {
   title: string
   slug: string
   description: string
-  challenge: string
-  solution: string
   image: string
   tags: string[]
-  category: "frontend" | "fullstack" | "ui/ux" | "client"
+  category: string[]
   techStack: string[]
   featured: boolean
   liveUrl?: string
@@ -17,51 +15,39 @@ export interface ProjectType {
 export const projects: ProjectType[] = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    slug: "ecommerce-platform",
-    description: "A modern e-commerce platform with a sleek UI, advanced filtering, and seamless checkout experience.",
-    challenge:
-      "The client needed a scalable e-commerce solution that could handle a large inventory while providing an intuitive shopping experience for customers.",
-    solution:
-      "I developed a custom e-commerce platform using Next.js for the frontend and a headless CMS for content management. The site features advanced product filtering, a streamlined checkout process, and integration with popular payment gateways.",
+    title: "GSF Landing Page",
+    slug: "gsf-landing-page",
+    description: "A clean, responsive landing page for a agriculture business",
     image: "/placeholder.svg?height=600&width=800",
     tags: ["E-commerce", "Next.js", "Tailwind CSS", "Stripe"],
-    category: "fullstack",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe API", "Sanity CMS", "Vercel"],
+    category: ["frontend"],
+    techStack: ["Frontend", "Next.js", "TypeScript", "React", "Tailwind CSS", "Responsive Design"],
     featured: true,
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/project",
+    liveUrl: "https://green-seed-financial-git-main-kens-projects-5283c606.vercel.app/",
+    // githubUrl: "https://github.com/username/project",
   },
   {
     id: 2,
-    title: "Portfolio for Photographer",
-    slug: "photographer-portfolio",
-    description: "A minimalist portfolio website for a professional photographer with a focus on visual storytelling.",
-    challenge:
-      "The photographer needed a portfolio that would showcase their work in a clean, uncluttered environment while still reflecting their unique artistic style.",
-    solution:
-      "I designed and developed a minimalist portfolio with a focus on large, high-quality images. The site features smooth transitions, a masonry grid layout, and category filtering to help visitors explore the photographer's work.",
+    title: "Portfolio for Developer",
+    slug: "developer-portfolio",
+    description: "A portfolio website for a professional devloper with a focus on visual storytelling",
     image: "/placeholder.svg?height=600&width=800",
-    tags: ["Portfolio", "React", "Framer Motion", "Photography"],
-    category: "frontend",
-    techStack: ["React", "Framer Motion", "CSS Modules", "Cloudinary", "Netlify"],
+    tags: ["Portfolio", "Frontend", "React", ""],
+    category: ["frontend"],
+    techStack: ["React", "Frontend", "HTML/CSS", "Typescript", "Framer-motion"],
     featured: true,
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/project",
+    liveUrl: "https://ksmit323.github.io/",
+    githubUrl: "https://github.com/ksmit323/ksmit323.github.io",
   },
   {
     id: 3,
-    title: "SaaS Dashboard",
+    title: "BitWork - Freelancing Platform",
     slug: "saas-dashboard",
     description:
-      "A comprehensive dashboard for a SaaS product with data visualization, user management, and analytics.",
-    challenge:
-      "The startup needed an intuitive admin dashboard that could present complex data in an accessible way while providing powerful management tools for administrators.",
-    solution:
-      "I built a feature-rich dashboard using React and TypeScript, with real-time data visualization using D3.js. The interface includes user management, detailed analytics, and customizable reports, all with a clean and intuitive UI.",
+      "A frontend design for BitWork, a freelancing site for crypto projects and a better alternative to UpWork",
     image: "/placeholder.svg?height=600&width=800",
-    tags: ["Dashboard", "React", "TypeScript", "D3.js"],
-    category: "fullstack",
+    tags: ["Freelancing", "Frontend", "Next.js", "React", "TypeScript", "Tailwind CSS"],
+    category: ["frontend"],
     techStack: ["React", "TypeScript", "D3.js", "Node.js", "Express", "MongoDB", "AWS"],
     featured: true,
     liveUrl: "https://example.com",
@@ -71,52 +57,86 @@ export const projects: ProjectType[] = [
     id: 4,
     title: "Mobile App UI Design",
     slug: "mobile-app-ui",
-    description: "A comprehensive UI design for a fitness tracking mobile application with a focus on user experience.",
-    challenge:
-      "The client needed a modern, engaging UI for their fitness app that would motivate users while making complex fitness data accessible and meaningful.",
-    solution:
-      "I created a complete UI design system with over 50 screens, focusing on clear data visualization, intuitive navigation, and motivational elements. The design includes custom icons, illustrations, and animations to enhance the user experience.",
+    description: "A comprehensive UI design for a alcohol tracking mobile application with a focus on user experience",
     image: "/placeholder.svg?height=600&width=800",
-    tags: ["UI/UX", "Mobile", "Figma", "Design System"],
-    category: "ui/ux",
+    tags: ["UI/UX", "Mobile", "Fullstack", "Rust", "Dioxus", "SQL"],
+    category: ["ui/ux"],
     techStack: ["Figma", "Adobe Illustrator", "Principle", "Lottie"],
     featured: false,
     liveUrl: "https://example.com",
   },
   {
     id: 5,
-    title: "Real Estate Listing Platform",
-    slug: "real-estate-platform",
-    description:
-      "A modern real estate platform with advanced search, filtering, and interactive maps for property listings.",
-    challenge:
-      "The real estate agency needed a platform that could showcase their properties with rich media while providing powerful search and filtering capabilities for potential buyers.",
-    solution:
-      "I developed a comprehensive real estate platform with interactive maps, advanced search filters, virtual tours, and detailed property information. The site includes agent profiles, saved searches, and inquiry forms to connect buyers with agents.",
+    title: "Tokenized Real Estate with Governance",
+    slug: "tokenized-real-estate",
+    description: "An EVM L1 Proof-of-Authority private chain that tokenized real estate properties with governance features. I implemented the Governance protocol with Solidity and I connected those contracts to the backend with GO bindings.  I also developed the API for interacting the smart contracts with the MongoDB database.",
     image: "/placeholder.svg?height=600&width=800",
-    tags: ["Real Estate", "Maps API", "Next.js", "Filtering"],
-    category: "client",
-    techStack: ["Next.js", "TypeScript", "Google Maps API", "PostgreSQL", "Prisma", "AWS S3"],
+    tags: ["Blockchain", "Backend", "Database", "RESTful API"],
+    category: ["blockchain", "backend", "smart contracts"],
+    techStack: ["Solidity", "Go", "MongoDB", "OpenZepellin", "Typescript", "Hardhat"],
     featured: false,
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/project",
   },
   {
     id: 6,
-    title: "Educational Platform",
-    slug: "educational-platform",
-    description: "An interactive learning platform with course management, progress tracking, and video lessons.",
-    challenge:
-      "The educational startup needed a platform that could deliver their courses in an engaging way while providing tools for students to track their progress and for instructors to manage content.",
-    solution:
-      "I built a comprehensive learning platform with video lessons, interactive quizzes, progress tracking, and a course management system. The platform includes features like note-taking, bookmarking, and discussion forums to enhance the learning experience.",
+    title: "Backend API development For an A.I. marketplace",
+    slug: "ai-marketplace",
+    description: "I developed the backend API to connect the frontend to synchronize with blockchain data",
     image: "/placeholder.svg?height=600&width=800",
-    tags: ["Education", "React", "Node.js", "MongoDB"],
-    category: "fullstack",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "AWS", "Socket.io"],
+    tags: ["Backend", "API", "Blockchain"],
+    category: ["backend, api"],
+    techStack: ["Python", "FastAPI", "Javascript", "Web.js", "Ethers.js", "Next.js"],
     featured: false,
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/project",
+  },
+  {
+    id: 7,
+    title: "AWS Cloud Infrastructure for a 3D NFT asset rendering project",
+    slug: "aws-cloud-infrastructure",
+    description: "Developed the scalable cloud infrasstructure for minting 10,000 3D NFT assets",
+    image: "/placeholder.svg?height=600&width=800",
+    tags: ["AWS", "Cloud Architecture", "Python", "Javascript", "Blockchain"],
+    category: ["DevOps"],
+    techStack: ["AWS Lambda", "AWS Batch", "AWS S3", "Docker"],
+    featured: false,
+  },
+  {
+    id: 8,
+    title: "NFT P2E Game",
+    slug: "nft-game",
+    description:
+      "Blockchain-based game on the EVM where players stake NFTs to earn ERC20 tokens",
+    image: "/placeholder.svg?height=600&width=800",
+    tags: ["Blockchain", "EVM", "Test-driven Development"],
+    category: ["blockchain"],
+    techStack: ["Solidity", "Foundry", "TypeScript", "React", "EVM"],
+    featured: false,
+    liveUrl: "https://play.buzzkill.world/",
+    githubUrl: "https://github.com/ksmit323/buzzkill-smart-contracts",
+  },
+  {
+    id: 9,
+    title: "Funding Rate Arbitrage",
+    slug: "funding-rate-arbitrage",
+    description: "Arbitraging funding rates across different DEXs for perpetual contracts",
+    image: "/placeholder.svg?height=600&width=800",
+    tags: ["Blockchain", "DeFi", "EVM"],
+    category: ["fullstack"],
+    techStack: ["Python", "Web3.py", "DEX SDK's", "EVM"],
+    featured: false,
+    liveUrl: "https://orderly.network/blog/best-use-orderly-encode-hackathon-winners/",
+    githubUrl: "https://github.com/ksmit323/funding-rate-arbitrage",
+  },
+  {
+    id: 10,
+    title: "Cube Market Maker",
+    slug: "cube-market-maker",
+    description: "A trading bot designed to provide liquidity on the Cube Exchange",
+    image: "/placeholder.svg?height=600&width=800",
+    tags: ["Blockchain", "DeFi", "EVM"],
+    category: ["fullstack"],
+    techStack: ["Rust", "DEX SDK's"],
+    featured: false,
+    liveUrl: "https://www.loom.com/share/7bd10a906661499c897a355dd0c9f76b?sid=c19d6163-e14d-4b7b-8cfa-a77252fa260c",
+    githubUrl: "https://github.com/ksmit323/cube_market_maker",
   },
 ]
 
