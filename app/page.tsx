@@ -9,7 +9,6 @@ import { ProjectModal } from "@/components/project-modal"
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen relative">
-      {/* Hero Section with background that extends to the whole page */}
       <HeroSection />
 
       {/* Portfolio Section */}
