@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { AboutPreview } from "@/components/about-preview"
+import { About } from "@/components/about"
 import { ContactCta } from "@/components/contact-cta"
 import { HeroSection } from "@/components/hero-section"
 import { projects } from "@/lib/projects"
@@ -65,7 +65,7 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about" className="relative z-10">
-        <AboutPreview />
+        <About />
       </section>
 
       {/* Testimonials Section */}

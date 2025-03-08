@@ -28,13 +28,21 @@ export function ProjectModal() {
       setProject(e.detail.project)
       setIsOpen(true)
     }
+    
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isOpen) {
+        setIsOpen(false)
+      }
+    }
 
     window.addEventListener("open-project-modal", handleOpenModal as EventListener)
+    window.addEventListener('keydown', handleKeyDown)
 
     return () => {
       window.removeEventListener("open-project-modal", handleOpenModal as EventListener)
+      window.removeEventListener('keydown', handleKeyDown)
     }
-  }, [])
+  }, [isOpen])
 
   if (!project) return null;
   
