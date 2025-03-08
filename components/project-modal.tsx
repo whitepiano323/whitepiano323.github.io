@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import { ExternalLink, Github, Code } from "lucide-react"
+import { ExternalLink, Github, Code, Lock as LockIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import type { ProjectType } from "@/lib/projects"
 import { motion, AnimatePresence } from "framer-motion"
+import { isMobileApp } from "@/lib/utils"
 
 // Create a global event system for opening the modal
 type OpenModalEvent = CustomEvent<{ project: ProjectType }>
@@ -35,7 +36,10 @@ export function ProjectModal() {
     }
   }, [])
 
-  if (!project) return null
+  if (!project) return null;
+  
+  const isMobile = isMobileApp(project);
+  const isProprietary = project.proprietary;
 
   return (
     <AnimatePresence>
@@ -183,7 +187,21 @@ export function ProjectModal() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+                {isMobile ? (
+                  <div className="absolute inset-0 bg-slate-900 flex items-center justify-center">
+                    <div className="relative w-[35%] h-[90%]">
+                      <Image 
+                        src={project.image || "/placeholder.svg"} 
+                        alt={project.title} 
+                        fill 
+                        className="object-contain rounded-xl" 
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-contain" />
+                )}
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
 
                 {/* Tags overlay on image with staggered animation */}
@@ -232,7 +250,7 @@ export function ProjectModal() {
                       </Button>
                     )}
 
-                    {project.githubUrl && (
+                    {project.githubUrl && !isProprietary ? (
                       <Button asChild variant="outline" className="w-full border-primary/20 hover:bg-primary/10">
                         <a
                           href={project.githubUrl}
@@ -244,7 +262,18 @@ export function ProjectModal() {
                           Source Code
                         </a>
                       </Button>
-                    )}
+                    ) : isProprietary ? (
+                      <Button 
+                        variant="outline" 
+                        className="w-full border-primary/20 hover:bg-primary/10 cursor-default opacity-80"
+                        disabled
+                      >
+                        <div className="flex items-center justify-center gap-2">
+                          <LockIcon className="h-4 w-4" />
+                          Code is Proprietary
+                        </div>
+                      </Button>
+                    ) : null}
                   </div>
                 </motion.div>
 

@@ -119,24 +119,23 @@ export function HeroSection() {
           className="max-w-3xl space-y-4"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-            Crafting <span className="text-primary glow-text">Digital Experiences</span> with Code and Creativity
+            Kenneth Smith
           </h1>
+          
+          <h3 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+            Build <span className="text-primary glow-text">Cool</span> Things
+          </h3>
 
           <p className="text-lg text-muted-foreground">
-            I'm a creative developer specializing in building beautiful, functional, and user-friendly web applications
-            that deliver exceptional digital experiences.
+            I'm a creative developer who loves to build.
           </p>
 
           <div className="flex flex-row gap-4 pt-2">
             <Button asChild size="lg">
-              <a href="#portfolio" className="group">
-                View My Work
+              <a href="#contact" className="group">
+                Get in Touch
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
-            </Button>
-
-            <Button asChild variant="outline" size="lg">
-              <a href="#contact">Get in Touch</a>
             </Button>
           </div>
         </motion.div>

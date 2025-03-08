@@ -4,6 +4,7 @@ import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
 import type { ProjectType } from "@/lib/projects"
+import { isMobileApp } from "@/lib/utils"
 
 interface ProjectCardProps {
   project: ProjectType
@@ -17,7 +18,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
     })
     window.dispatchEvent(event)
   }
-
+  
+  const isMobile = isMobileApp(project);
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -32,12 +35,25 @@ export function ProjectCard({ project }: ProjectCardProps) {
       className="group overflow-hidden rounded-lg border border-muted/40 bg-card text-card-foreground shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:border-primary/30 cursor-pointer"
     >
       <div className="relative aspect-video overflow-hidden">
-        <Image
-          src={project.image || "/placeholder.svg"}
-          alt={project.title}
-          fill
-          className="object-cover transition-transform duration-700 group-hover:scale-110"
-        />
+        {isMobile ? (
+          <div className="absolute inset-0 bg-slate-900 flex items-center justify-center">
+            <div className="relative w-[45%] h-[90%]">
+              <Image
+                src={project.image || "/placeholder.svg"}
+                alt={project.title}
+                fill
+                className="object-contain rounded-xl"
+              />
+            </div>
+          </div>
+        ) : (
+          <Image
+            src={project.image || "/placeholder.svg"}
+            alt={project.title}
+            fill
+            className="object-contain transition-transform duration-700 group-hover:scale-110"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
         <div className="absolute bottom-0 left-0 w-full p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
