@@ -158,6 +158,16 @@ export function ProjectModal() {
               >
                 <h2 className="text-2xl font-bold tracking-tight text-white pr-8">{project.title}</h2>
                 <p className="text-sm text-muted-foreground mt-1">{project.description}</p>
+                
+                {/* Categories badges */}
+                <div className="flex flex-wrap gap-1 mt-3">
+                  {project.categories.map((category) => (
+                    <Badge key={category} variant="outline" className="text-xs border-primary/20 bg-primary/5">
+                      {category}
+                    </Badge>
+                  ))}
+                </div>
+                
                 <button
                   onClick={() => setIsOpen(false)}
                   className="absolute right-0 top-0 rounded-full bg-background/20 p-1 text-muted-foreground hover:text-foreground transition-colors"

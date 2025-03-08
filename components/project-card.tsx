@@ -77,6 +77,15 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.title}
         </h3>
         <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
+        
+        {/* Display category badges */}
+        <div className="flex flex-wrap gap-1 pt-2">
+          {project.categories.map((category) => (
+            <Badge key={category} variant="outline" className="text-xs border-primary/10 bg-primary/5">
+              {category}
+            </Badge>
+          ))}
+        </div>
       </div>
     </motion.div>
   )
