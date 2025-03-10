@@ -63,33 +63,33 @@ export function ContactCta() {
 
               <div className="space-y-4 pt-4">
                 <Button asChild variant="outline" className="w-full justify-start">
-                  <a href="mailto:hello@example.com" className="flex items-center gap-2">
+                  <a href="mailto:ksmit323@gmail.com" className="flex items-center gap-2">
                     <Mail className="h-4 w-4" />
-                    hello@example.com
+                    ksmit323@gmail.com
                   </a>
                 </Button>
 
                 <Button asChild variant="outline" className="w-full justify-start">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/ksmit323"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
                     <Github className="h-4 w-4" />
-                    github.com/username
+                    github.com/ksmit323
                   </a>
                 </Button>
 
                 <Button asChild variant="outline" className="w-full justify-start">
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/kenneth-smith-50553493/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
                     <Linkedin className="h-4 w-4" />
-                    linkedin.com/in/username
+                    linkedin.com/in/kenneth-smith-50553493
                   </a>
                 </Button>
               </div>

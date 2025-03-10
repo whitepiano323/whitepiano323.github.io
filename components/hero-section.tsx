@@ -122,13 +122,9 @@ export function HeroSection() {
             Kenneth Smith
           </h1>
           
-          <h3 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+          <h3 className="text-2xl sm:text-4xl md:text-4xl font-bold tracking-tight">
             Build <span className="text-primary glow-text">Cool</span> Things
           </h3>
-
-          <p className="text-lg text-muted-foreground">
-            I'm a creative developer who loves to build.
-          </p>
 
           <div className="flex flex-row gap-4 pt-2">
             <Button asChild size="lg">

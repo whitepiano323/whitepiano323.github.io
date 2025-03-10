@@ -61,10 +61,6 @@ export function About() {
                   It's not that I really care about the buzz words like "memory safe, perfomant, fearless concurrency". 
                   I just genuinely find it fun to code in Rust. The cryptic syntax makes me feel like a hacker.</span>
               </p>
-              <p className="text-muted-foreground">
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-                reading, playing American football or just coding.
-              </p>
 
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">Skills & Expertise</h3>

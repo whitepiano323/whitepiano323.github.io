@@ -16,16 +16,13 @@ export function Footer() {
 
         <div className="flex flex-col items-center md:items-end gap-4">
           <div className="flex items-center gap-4">
-            <Link href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <Link href="https://github.com/ksmit323" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Github className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
             </Link>
-            <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <Link href="https://www.linkedin.com/in/kenneth-smith-50553493/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
             </Link>
-            <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
-            </Link>
-            <Link href="mailto:hello@example.com" aria-label="Email">
+            <Link href="mailto:ksmit323@gmail.com" aria-label="Email">
               <Mail className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
             </Link>
           </div>
