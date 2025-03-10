@@ -6,6 +6,7 @@ import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { Github } from "lucide-react"
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -56,6 +57,10 @@ export function Navbar() {
           ))}
 
           <ThemeToggle />
+          
+          <Link href="https://github.com/ksmit323" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <Github className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+          </Link>
 
           <Button asChild size="sm">
             <a href="#contact">Hire Me</a>
