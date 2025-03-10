@@ -127,10 +127,17 @@ export function HeroSection() {
           </h3>
 
           <div className="flex flex-row gap-4 pt-2">
-            <Button asChild size="lg">
-              <a href="#contact" className="group">
-                Get in Touch
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <Button 
+              asChild 
+              size="lg" 
+              className="rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 hover:from-indigo-500 hover:via-purple-500 hover:to-blue-500 border-none shadow-[0_0_15px_rgba(99,102,241,0.3)] hover:shadow-[0_0_25px_rgba(99,102,241,0.5)] transition-all duration-300 px-6"
+            >
+              <a href="#contact" className="group relative overflow-hidden">
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shine_1.5s_ease]"></div>
+                <span className="flex items-center justify-center font-medium">
+                  Get in Touch
+                  <ArrowRight className="ml-2 h-4 w-4 transition-all group-hover:translate-x-1 group-hover:scale-110" />
+                </span>
               </a>
             </Button>
           </div>

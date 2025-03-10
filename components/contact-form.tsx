@@ -57,7 +57,7 @@ export function ContactForm() {
   }
 
   return (
-    <section className="py-12 md:py-24 bg-muted/50 relative z-10">
+    <section className="py-12 md:py-24 dark:bg-muted/50 bg-gray-100 relative z-10">      
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -76,7 +76,7 @@ export function ContactForm() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6 relative">
               
-              <p className="text-blue-100/80 relative backdrop-blur-sm bg-indigo-950/10 p-5 rounded-lg border border-indigo-500/20 shadow-[0_4px_20px_-12px_rgba(79,70,229,0.4)]">
+              <p className="dark:text-blue-100/90 text-gray-800 relative backdrop-blur-sm dark:bg-indigo-950/30 bg-white/80 p-5 rounded-lg border dark:border-indigo-500/30 border-gray-300 shadow-[0_4px_20px_-12px_rgba(79,70,229,0.4)]">                
                 Have a project in mind or want to discuss a potential collaboration? I'd love to hear from you. Fill out
                 the form or reach out through any of the channels below.
               </p>
@@ -85,7 +85,7 @@ export function ContactForm() {
                 <Button 
                   asChild 
                   variant="outline" 
-                  className="w-full justify-start bg-indigo-950/30 border-indigo-500/30 text-blue-300 hover:bg-indigo-900/40 hover:border-indigo-400/40 hover:text-blue-200 backdrop-blur-sm transition-all duration-300 group"
+                  className="w-full justify-start dark:bg-indigo-950/50 bg-white/80 dark:border-indigo-500/40 border-gray-300 dark:text-blue-100 text-gray-800 dark:hover:bg-indigo-900/60 hover:bg-gray-50 dark:hover:border-indigo-400/60 hover:border-gray-400 dark:hover:text-blue-50 hover:text-gray-900 backdrop-blur-sm transition-all duration-300 group"           
                 >
                   <a href="mailto:ksmit323@gmail.com" className="flex items-center gap-3">
                     <div className="relative">
@@ -99,7 +99,7 @@ export function ContactForm() {
                 <Button 
                   asChild 
                   variant="outline" 
-                  className="w-full justify-start bg-indigo-950/30 border-indigo-500/30 text-blue-300 hover:bg-indigo-900/40 hover:border-indigo-400/40 hover:text-blue-200 backdrop-blur-sm transition-all duration-300 group"
+                  className="w-full justify-start dark:bg-indigo-950/50 bg-white/80 dark:border-indigo-500/40 border-gray-300 dark:text-blue-100 text-gray-800 dark:hover:bg-indigo-900/60 hover:bg-gray-50 dark:hover:border-indigo-400/60 hover:border-gray-400 dark:hover:text-blue-50 hover:text-gray-900 backdrop-blur-sm transition-all duration-300 group"
                 >
                   <a
                     href="https://www.linkedin.com/in/kenneth-smith-50553493/"
@@ -119,14 +119,8 @@ export function ContactForm() {
 
             <div className="space-y-8">
               {!isSubmitted && (
-                <form onSubmit={handleSubmit} className="space-y-6 relative bg-gradient-to-b from-indigo-900/20 to-black/30 backdrop-blur-sm p-6 rounded-xl border border-indigo-500/20 shadow-[0_0_10px_rgba(79,70,229,0.2)]">
-                  <div className="absolute top-0 right-0 w-full h-full overflow-hidden rounded-xl opacity-10 pointer-events-none">
-                    <div className="absolute -right-10 -top-10 w-40 h-40 bg-blue-400 rounded-full filter blur-3xl"></div>
-                    <div className="absolute left-0 bottom-0 w-32 h-32 bg-violet-500 rounded-full filter blur-3xl"></div>
-                  </div>
-                  
-                  <div className="space-y-2 relative">
-                    <Label htmlFor="name" className="text-blue-100 font-medium">Name</Label>
+                <form onSubmit={handleSubmit} className="space-y-6 relative dark:bg-gray-900/95 bg-white/90 backdrop-blur-sm p-6 rounded-xl dark:border-indigo-500/30 border-gray-300 dark:shadow-[0_0_10px_rgba(79,70,229,0.3)] shadow-lg">                  <div className="space-y-2 relative">
+                    <Label htmlFor="name" className="dark:text-blue-100 text-gray-800 font-medium">Name</Label>
                     <Input
                       id="name"
                       name="name"
@@ -134,13 +128,12 @@ export function ContactForm() {
                       value={formState.name}
                       onChange={handleChange}
                       required
-                      className="bg-indigo-950/40 border-indigo-500/30 focus:border-blue-400/70 focus:ring-1 focus:ring-blue-400/50 text-blue-100 placeholder:text-blue-300/40 transition-all duration-300"
+                      className="dark:bg-indigo-950/40 bg-white dark:border-indigo-500/30 border-gray-300 dark:focus:border-blue-400/70 focus:border-primary/70 dark:focus:ring-1 focus:ring-1 dark:focus:ring-blue-400/50 focus:ring-primary/50 dark:text-blue-100 text-gray-800 dark:placeholder:text-blue-300/40 placeholder:text-gray-500/70 transition-all duration-300"
                     />
                   </div>
               
                   <div className="space-y-2 relative">
-                    <Label htmlFor="email" className="text-blue-100 font-medium">Your email</Label>
-                    <Input
+                    <Label htmlFor="email" className="dark:text-blue-100 text-gray-800 font-medium">Your email</Label>                    <Input
                       id="email"
                       name="email"
                       type="email"
@@ -148,12 +141,11 @@ export function ContactForm() {
                       value={formState.email}
                       onChange={handleChange}
                       required
-                      className="bg-indigo-950/40 border-indigo-500/30 focus:border-blue-400/70 focus:ring-1 focus:ring-blue-400/50 text-blue-100 placeholder:text-blue-300/40 transition-all duration-300"
-                    />
+                      className="dark:bg-indigo-950/40 bg-white dark:border-indigo-500/30 border-gray-300 dark:focus:border-blue-400/70 focus:border-primary/70 dark:focus:ring-1 focus:ring-1 dark:focus:ring-blue-400/50 focus:ring-primary/50 dark:text-blue-100 text-gray-800 dark:placeholder:text-blue-300/40 placeholder:text-gray-500/70 transition-all duration-300"                    />
                   </div>
               
                   <div className="space-y-2 relative">
-                    <Label htmlFor="message" className="text-blue-100 font-medium">Message</Label>
+                    <Label htmlFor="message" className="dark:text-blue-100 text-gray-800 font-medium">Message</Label>
                     <Textarea
                       id="message"
                       name="message"
@@ -162,30 +154,54 @@ export function ContactForm() {
                       value={formState.message}
                       onChange={handleChange}
                       required
-                      className="bg-indigo-950/40 border-indigo-500/30 focus:border-blue-400/70 focus:ring-1 focus:ring-blue-400/50 text-blue-100 placeholder:text-blue-300/40 resize-none transition-all duration-300"
-                    />
+                      className="dark:bg-indigo-950/40 bg-white dark:border-indigo-500/30 border-gray-300 dark:focus:border-blue-400/70 focus:border-primary/70 dark:focus:ring-1 focus:ring-1 dark:focus:ring-blue-400/50 focus:ring-primary/50 dark:text-blue-100 text-gray-800 dark:placeholder:text-blue-300/40 placeholder:text-gray-500/70 transition-all duration-300"                    />
                   </div>
               
                   <Button 
                     type="submit" 
                     disabled={isSubmitting} 
-                    className="w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white border-none relative overflow-hidden group"
+                    className="rounded-full w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 hover:from-indigo-500 hover:via-purple-500 hover:to-blue-500 text-white border-none relative overflow-hidden group shadow-[0_0_20px_rgba(99,102,241,0.3)] hover:shadow-[0_0_30px_rgba(99,102,241,0.5)] transition-all duration-300"
                   >
-                    <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shine_1.5s_ease]"></div>
+                    {/* Animated glow effect */}
+                    <div className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute inset-[-1px] rounded-md bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 animate-pulse blur-sm"></div>
+                    </div>
                     
-                    {isSubmitting ? (
-                      <span className="flex items-center justify-center gap-2">
-                        <span className="h-5 w-5 animate-spin rounded-full border-2 border-current border-t-transparent shadow-[0_0_5px_rgba(255,255,255,0.5)]" />
-                        <span className="tracking-wide">Sending...</span>
-                      </span>
-                    ) : (
-                      <span className="flex items-center justify-center gap-2">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5">
-                          <path d="M21 3L14 10M21 3L15 21L10 14L3 9L21 3Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                        <span className="tracking-wide">Send Message</span>
-                      </span>
-                    )}
+                    {/* Shine effect */}
+                    <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shine_1.5s_ease]"></div>
+                    
+                    {/* Cosmic particle effect */}
+                    <div className="absolute inset-0 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {Array.from({ length: 3 }).map((_, i) => (
+                        <div 
+                          key={i}
+                          className="absolute w-1 h-1 bg-white rounded-full"
+                          style={{
+                            top: `${Math.random() * 100}%`,
+                            left: `${Math.random() * 100}%`,
+                            opacity: 0.7,
+                            animation: `ping 1s cubic-bezier(0, 0, 0.2, 1) infinite ${Math.random() * 0.5}s`
+                          }}
+                        />
+                      ))}
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="relative">
+                      {isSubmitting ? (
+                        <span className="flex items-center justify-center gap-2">
+                          <span className="h-5 w-5 animate-spin rounded-full border-2 border-current border-t-transparent shadow-[0_0_5px_rgba(255,255,255,0.5)]" />
+                          <span className="tracking-wide font-semibold">Transmitting...</span>
+                        </span>
+                      ) : (
+                        <span className="flex items-center justify-center gap-2">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5">
+                            <path d="M21 3L14 10M21 3L15 21L10 14L3 9L21 3Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                          <span className="tracking-wide font-semibold">Send Message</span>
+                        </span>
+                      )}
+                    </div>
                   </Button>
                   
                   <div className="absolute -bottom-1 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>

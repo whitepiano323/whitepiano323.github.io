@@ -170,7 +170,11 @@ export function ProjectModal() {
                 {/* Categories badges */}
                 <div className="flex flex-wrap gap-1 mt-3">
                   {project.categories.map((category) => (
-                    <Badge key={category} variant="outline" className="text-xs border-primary/20 bg-primary/5">
+                    <Badge 
+                      key={category} 
+                      variant="outline" 
+                      className="text-xs border-primary/20 bg-primary/10 dark:bg-primary/5 text-primary-foreground dark:text-primary-foreground"
+                    >
                       {category}
                     </Badge>
                   ))}
@@ -231,9 +235,12 @@ export function ProjectModal() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4 + index * 0.05 }}
                     >
-                      <Badge variant="secondary" className="bg-black/50 backdrop-blur-sm text-xs">
+                      <Badge 
+                        variant="secondary" 
+                        className="bg-black/70 dark:bg-black/50 backdrop-blur-sm text-xs text-white"
+                      >
                         {tag}
-                      </Badge>
+                      </Badge>                    
                     </motion.div>
                   ))}
                 </div>
@@ -315,7 +322,10 @@ export function ProjectModal() {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.6 + index * 0.05 }}
                       >
-                        <Badge variant="outline" className="bg-muted/10 border-primary/20 text-xs">
+                        <Badge 
+                          variant="outline" 
+                          className="bg-muted/20 dark:bg-muted/10 border-primary/20 text-xs text-foreground dark:text-foreground"
+                        >
                           {tech}
                         </Badge>
                       </motion.div>

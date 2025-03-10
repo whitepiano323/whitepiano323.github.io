@@ -59,7 +59,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="absolute bottom-0 left-0 w-full p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
           <div className="flex flex-wrap gap-1">
             {project.tags.slice(0, 3).map((tag) => (
-              <Badge key={tag} variant="secondary" className="text-xs bg-black/50 backdrop-blur-sm">
+              <Badge key={tag} variant="outline" className="ext-xs dark:bg-black/50 dark:backdrop-blur-sm bg-black/80 text-white">
                 {tag}
               </Badge>
             ))}
