@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { About } from "@/components/about"
-import { ContactCta } from "@/components/contact-cta"
+import { ContactForm } from "@/components/contact-form"
 import { HeroSection } from "@/components/hero-section"
 import { projects } from "@/lib/projects"
 import { ProjectCard } from "@/components/project-card"
@@ -20,12 +20,9 @@ export default function Home() {
     <main className="flex flex-col min-h-screen relative">
       <HeroSection />
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="container py-12 space-y-8 relative z-10">
-        <div>
-          <h2 className="text-3xl font-bold tracking-tight">My Projects</h2>
-        </div>
-
+      {/* Projects Section */}
+      <section id="projects" className="container py-12 space-y-8 relative z-10">
+        
         {/* Project Filter */}
         <ProjectFilter projects={projects} onFilterChange={setFilteredProjects} />
 
@@ -75,7 +72,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="relative z-10">
-        <ContactCta />
+        <ContactForm />
       </section>
 
       {/* Project Modal - Will be controlled by state in ProjectCard */}
