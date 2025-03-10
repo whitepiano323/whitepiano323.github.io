@@ -9,23 +9,16 @@ const testimonials = [
   {
     id: 1,
     content:
-      "Working with this developer was an absolute pleasure. They took my vague ideas and transformed them into a stunning website that perfectly represents my brand. Their attention to detail and technical expertise are truly impressive.",
-    author: "Sarah Johnson",
-    role: "Founder, Creative Studio",
+      "Kenneth did an amazing job transforming my bad Wordpress site into a more professional fully featured landing page.  I'm very happy to have worked together.",
+    author: "Robert Pearl",
+    role: "Founder, GSF",
   },
   {
     id: 2,
     content:
-      "I've worked with many developers over the years, but none have delivered such high-quality work with such efficiency. They not only met our technical requirements but also provided valuable insights that improved our overall product.",
-    author: "Michael Chen",
-    role: "CTO, Tech Startup",
-  },
-  {
-    id: 3,
-    content:
-      "Our e-commerce site needed a complete overhaul, and they delivered beyond our expectations. The site is not only beautiful but also performs exceptionally well. Our conversion rates have increased by 40% since the redesign.",
-    author: "Emily Rodriguez",
-    role: "Marketing Director, Retail Brand",
+      "We needed a lot of help building our computer vision algorith to detect manufacturing defects.  Kenneth came in and immediately hit the ground running.  He sped up our progress tremendously and we were able to push to production very quickly.  Hiring him was obviously the right move.",
+    author: "Trevor Thill",
+    role: "VP of Operations, Polaris",
   },
 ]
 
